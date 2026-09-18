@@ -59,7 +59,7 @@ export default function AnchorLiveScanner() {
             <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400">
               <span>Signer: {ev.signer}</span>
               <a
-                href={`https://solscan.io/tx/${ev.txHash}`}
+                href={`https://solscan.io/account/${ev.programId}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:underline flex items-center gap-0.5"

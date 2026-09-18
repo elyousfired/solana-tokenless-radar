@@ -36,62 +36,74 @@ export function generateLiveDetectionFeed() {
     {
       id: "ev-1",
       type: "VAULT_DEPOSIT",
-      programName: "FlashTrade",
-      programId: "FLASH6o2jBw8X77kZ4XnF9wH2K1L7mP5q9R3sT1vW",
-      instruction: "deposit_to_flp",
-      amount: "450.00 SOL",
-      amountUsd: 50625,
+      programName: "Meteora DLMM",
+      programId: "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      instruction: "add_liquidity_by_weight",
+      amount: "850.00 SOL",
+      amountUsd: 114750,
       signer: "7xKv...9mP2",
       timeAgo: "12s ago",
-      txHash: "5Kt8Z4x9jQ2wP9rN1vT3xM5bZ8cE4dL6gH1jK3nF7mP2"
+      txHash: "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo"
     },
     {
       id: "ev-2",
-      type: "NEW_PROGRAM_DEPLOY",
-      programName: "ZeroLend SVM",
-      programId: "ZRLND8mK1vN9xT3bZ7cE5dL8gH2jM4qF6rP1wS9",
-      instruction: "BPFLoaderUpgradeab1e::DeployWithMaxDataLen",
-      amount: "Anchor IDL Verified",
-      amountUsd: 0,
-      signer: "Squads::MultiSig",
-      timeAgo: "45s ago",
-      txHash: "3mN9xT3bZ7cE5dL8gH2jM4qF6rP1wS95Kt8Z4x9jQ2"
+      type: "VAULT_DEPOSIT",
+      programName: "Marginfi v2",
+      programId: "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA",
+      instruction: "lending_account_deposit",
+      amount: "25,000.00 USDC",
+      amountUsd: 25000,
+      signer: "4pQ8...1kL9",
+      timeAgo: "28s ago",
+      txHash: "MFv2hWf31Z9kbCa1snEPYctwafyhdvnV7FZnsebVacA"
     },
     {
       id: "ev-3",
       type: "VAULT_DEPOSIT",
       programName: "Solayer Labs",
-      programId: "solaY7K8q2wP9rN1vT3xM5bZ8cE4dL6gH1jK3nF7mP2",
-      instruction: "deposit_lst",
+      programId: "endoLNCKTqDn8gSVnN2hDdpgACUPWHZTwoYnnMybpAT",
+      instruction: "deposit_lst_to_restaking_vault",
       amount: "1,200.00 JitoSOL",
-      amountUsd: 148800,
+      amountUsd: 162000,
       signer: "9pL2...3wX1",
       timeAgo: "1m ago",
-      txHash: "8cE4dL6gH1jK3nF7mP25Kt8Z4x9jQ2wP9rN1vT3xM5b"
+      txHash: "endoLNCKTqDn8gSVnN2hDdpgACUPWHZTwoYnnMybpAT"
     },
     {
       id: "ev-4",
       type: "PDA_INITIALIZED",
-      programName: "Fragmetric",
-      programId: "FRAGm8xK2wN1vP9rT3bZ7cE5dL8gH2jM4qF6rP1wS9",
+      programName: "Fragmetric Restake",
+      programId: "fragnAis7Bp6FTsMoa6YcH8UffhEw43Ph79qAiK3iF3",
       instruction: "initialize_restake_pool",
       amount: "Vault PDA Created",
       amountUsd: 0,
       signer: "Frag::Deployer",
       timeAgo: "2m ago",
-      txHash: "2wP9rN1vT3xM5bZ8cE4dL6gH1jK3nF7mP25Kt8Z4x9j"
+      txHash: "fragnAis7Bp6FTsMoa6YcH8UffhEw43Ph79qAiK3iF3"
     },
     {
       id: "ev-5",
       type: "VAULT_DEPOSIT",
-      programName: "SplitFi",
-      programId: "SPLT4m8K1vN9xT3bZ7cE5dL8gH2jM4qF6rP1wS9",
-      instruction: "tokenize_yield",
-      amount: "350.00 mSOL",
-      amountUsd: 43400,
+      programName: "Phoenix DEX",
+      programId: "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY",
+      instruction: "place_limit_order",
+      amount: "350.00 SOL",
+      amountUsd: 47250,
       signer: "4fT1...8kL9",
       timeAgo: "3m ago",
-      txHash: "1jK3nF7mP25Kt8Z4x9jQ2wP9rN1vT3xM5bZ8cE4dL6g"
+      txHash: "PhoeNiXZ8ByJGLkxNfZRnkUfjvmuYqLR89jjFHGqdXY"
+    },
+    {
+      id: "ev-6",
+      type: "VAULT_DEPOSIT",
+      programName: "Squads Protocol v4",
+      programId: "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf",
+      instruction: "multisig_create_transaction",
+      amount: "Treasury Vault Guard",
+      amountUsd: 0,
+      signer: "Squads::Council",
+      timeAgo: "4m ago",
+      txHash: "SQDS4ep65T869zMMBKyuUq6aD6EgTu8psMjkvj52pCf"
     }
   ];
   return events;
