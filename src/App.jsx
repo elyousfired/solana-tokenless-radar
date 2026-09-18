@@ -5,6 +5,7 @@ import CategoryFilter from './components/CategoryFilter';
 import ProtocolCard from './components/ProtocolCard';
 import ProtocolModal from './components/ProtocolModal';
 import AnchorLiveScanner from './components/AnchorLiveScanner';
+import ProgramSniper from './components/ProgramSniper';
 import { SOLANA_TOKENLESS_PROTOCOLS, PRE_TOKEN_STATS } from './data/solanaTokenlessDatabase';
 import { fetchSolanaClusterStats } from './services/solanaRpcScanner';
 import { Radar, ExternalLink, ShieldCheck, Sparkles, Filter, Lock } from 'lucide-react';
@@ -61,13 +62,16 @@ export default function App() {
 
       {/* Main Content Dashboard */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
-        {/* 1. Hero Section: Pre-Token TVL & Institutional Gauge */}
+        {/* 1. Hero Section: Fresh Protocol & Flywheel Gauge */}
         <HeroStats
           stats={PRE_TOKEN_STATS}
           onSelectProtocol={(proto) => setActiveModalProtocol(proto)}
         />
 
-        {/* 2. Live On-Chain Anchor & PDA Vault Activity Feed */}
+        {/* 2. Interactive On-Chain Program & IDL Sniper */}
+        <ProgramSniper />
+
+        {/* 3. Live On-Chain Anchor & PDA Vault Activity Feed */}
         <AnchorLiveScanner />
 
         {/* 3. Filter Bar & Search */}
