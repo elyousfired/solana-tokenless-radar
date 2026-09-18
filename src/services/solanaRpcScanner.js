@@ -241,74 +241,74 @@ function formatTimeAgo(timestamp) {
   return `${Math.floor(diff / 86400)}d ago`;
 }
 
-// Generate realistic live micro-protocol and flywheel detection feed
+// Generate realistic live on-chain protocol birth and vault detection feed
 export function generateLiveDetectionFeed() {
   const events = [
     {
       id: "ev-1",
-      type: "BURN_FLYING_WHEEL",
-      programName: "Ember Curve",
-      programId: "5dvXTZ5qwgafnHtwu3Ls3QrWx1U4LQsFeCuJgkk4QEC6",
-      instruction: "trigger_burn_event",
-      amount: "🔥 2,450 EMBER Burned",
-      amountUsd: 74.20,
-      signer: "Ember::BurnEngine",
-      timeAgo: "8s ago"
+      type: "NEW_PROGRAM_DEPLOY",
+      programName: "BPFLoaderUpgradeab1e",
+      programId: "LOOPm8xK2wN1vP9rT3bZ7cE5dL8gH2jM4qF6rP1wS9",
+      instruction: "DeployWithMaxDataLen",
+      amount: "142.5 KB BPF Binary",
+      amountUsd: 0,
+      signer: "Deployer::Authority",
+      timeAgo: "14s ago"
     },
     {
       id: "ev-2",
-      type: "BONDING_CURVE_TRADE",
-      programName: "Moonshot Core",
-      programId: "MSHThxVtzCkgXvVbX68bF2b8y9GkLz6JbN84kQ2wP9r",
-      instruction: "buy_exact_out",
-      amount: "15.80 SOL Inflow",
-      amountUsd: 2133,
-      signer: "8xL2...4wT1",
-      timeAgo: "21s ago"
+      type: "PDA_VAULT_INIT",
+      programName: "Loopscale Credit",
+      programId: "LOOPm8xK2wN1vP9rT3bZ7cE5dL8gH2jM4qF6rP1wS9",
+      instruction: "initialize_credit_market",
+      amount: "Isolated Risk Vault PDA",
+      amountUsd: 0,
+      signer: "Loopscale::Council",
+      timeAgo: "42s ago"
     },
     {
       id: "ev-3",
-      type: "REVSHARE_DISTRIBUTION",
-      programName: "Pons Protocol",
-      programId: "PONS4m8K1vN9xT3bZ7cE5dL8gH2jM4qF6rP1wS9k2L",
-      instruction: "distribute_staker_dividends",
-      amount: "8.40 SOL Yield",
-      amountUsd: 1134,
-      signer: "Pons::FeeVault",
-      timeAgo: "45s ago"
-    },
-    {
-      id: "ev-4",
-      type: "BURN_FLYING_WHEEL",
-      programName: "Stonk Protocol",
-      programId: "STNK68k2wP9rN1vT3xM5bZ8cE4dL6gH1jK3nF7mP29",
-      instruction: "execute_burn",
-      amount: "🔥 850 STNK Destroyed",
-      amountUsd: 185.00,
-      signer: "Stonk::AutomatedKeeper",
+      type: "VAULT_DEPOSIT",
+      programName: "Adrena Protocol",
+      programId: "ADRN7K8q2wP9rN1vT3xM5bZ8cE4dL6gH1jK3nF7mP2",
+      instruction: "add_liquidity_alp",
+      amount: "450.00 SOL Liquidity",
+      amountUsd: 60750,
+      signer: "8xL2...4wT1",
       timeAgo: "1m ago"
     },
     {
-      id: "ev-5",
-      type: "SOCIAL_KEY_TRADE",
-      programName: "Bags Protocol",
-      programId: "BAGS2wP9rN1vT3xM5bZ8cE4dL6gH1jK3nF7mP25Kt8Z",
-      instruction: "buy_creator_key",
-      amount: "4.25 SOL Key Mint",
-      amountUsd: 573,
-      signer: "3nF7...9mP2",
+      id: "ev-4",
+      type: "YIELD_TOKENIZE",
+      programName: "Sandglass Yield",
+      programId: "SNDG4m8K1vN9xT3bZ7cE5dL8gH2jM4qF6rP1wS9k",
+      instruction: "tokenize_yield",
+      amount: "250.00 JitoSOL Split",
+      amountUsd: 38500,
+      signer: "4fT1...8kL9",
       timeAgo: "2m ago"
     },
     {
-      id: "ev-6",
-      type: "TOKEN2022_RESTAKE",
+      id: "ev-5",
+      type: "RESTAKE_DEPOSIT",
       programName: "Fragmetric Restake",
       programId: "fragnAis7Bp6FTsMoa6YcH8UffhEw43Ph79qAiK3iF3",
-      instruction: "harvest_compound_rewards",
-      amount: "125.00 fragSOL",
-      amountUsd: 16875,
-      signer: "Frag::Compunder",
+      instruction: "deposit_lst",
+      amount: "120.00 fragSOL Minted",
+      amountUsd: 16200,
+      signer: "Frag::Signer",
       timeAgo: "3m ago"
+    },
+    {
+      id: "ev-6",
+      type: "YIELD_REBALANCE",
+      programName: "Lulo FlexLend",
+      programId: "FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q",
+      instruction: "rebalance_markets",
+      amount: "50,000.00 USDC Routed",
+      amountUsd: 50000,
+      signer: "Lulo::KeeperBot",
+      timeAgo: "4m ago"
     }
   ];
   return events;

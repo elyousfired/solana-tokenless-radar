@@ -19,11 +19,11 @@ import {
 import { inspectOnChainAddress } from '../services/solanaRpcScanner';
 
 const PRESETS = [
-  { label: 'Ember Curve', address: '5dvXTZ5qwgafnHtwu3Ls3QrWx1U4LQsFeCuJgkk4QEC6', icon: '🔥' },
-  { label: 'Ember Burn Wallet', address: 'GZjYfGyUNQfDChcQ66Gc3ZMcQqPEisyRYe1nPyQhP9bp', icon: '💰' },
-  { label: 'Fragmetric Restake', address: 'fragnAis7Bp6FTsMoa6YcH8UffhEw43Ph79qAiK3iF3', icon: '⚡' },
-  { label: 'Meteora DLMM', address: 'LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo', icon: '📦' },
-  { label: 'Pump.fun Core', address: '6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P', icon: '🎯' }
+  { label: 'Loopscale (Credit)', address: 'LOOPm8xK2wN1vP9rT3bZ7cE5dL8gH2jM4qF6rP1wS9', icon: '🏛️' },
+  { label: 'Adrena (Perp DEX)', address: 'ADRN7K8q2wP9rN1vT3xM5bZ8cE4dL6gH1jK3nF7mP2', icon: '📈' },
+  { label: 'Fragmetric (Restaking)', address: 'fragnAis7Bp6FTsMoa6YcH8UffhEw43Ph79qAiK3iF3', icon: '⚡' },
+  { label: 'Lulo (Lending Router)', address: 'FL3X2pRsQ9zHENpZSKDRREtccwJuei8yg9fwDu9UN69Q', icon: '🔄' },
+  { label: 'Meteora DLMM', address: 'LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo', icon: '📦' }
 ];
 
 export default function ProgramSniper() {
@@ -59,15 +59,23 @@ export default function ProgramSniper() {
           </div>
           <div>
             <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <span>On-Chain Program & IDL Sniper</span>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">
+              <span>Zero-Day Program & BPF Birth Sniper</span>
+              <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">
                 Mainnet-Beta RPC Direct
               </span>
             </h3>
             <p className="text-[11px] text-slate-400 font-sans mt-0.5">
-              Paste ANY newly detected Solana Program ID, bonding curve, or fee wallet to inspect its live BPF bytecode & age.
+              Inspect any Solana Program ID to verify BPF bytecode, deploy age, vault custody, and confirm 0 native token launched.
             </p>
           </div>
+        </div>
+
+        {/* 4-Step On-Chain Birth Footprint */}
+        <div className="hidden lg:flex items-center gap-2 text-[10px] font-mono text-slate-400 bg-[#070b14] px-3 py-1.5 rounded-lg border border-slate-800">
+          <span className="text-cyan-400 font-bold">Trace 1:</span> DeployWithMaxDataLen →
+          <span className="text-purple-400 font-bold">Trace 2:</span> Bytecode &gt; 40KB →
+          <span className="text-amber-400 font-bold">Trace 3:</span> Vault PDA →
+          <span className="text-emerald-400 font-bold">Trace 4:</span> 0 Native Token
         </div>
 
         {/* Quick Presets */}
